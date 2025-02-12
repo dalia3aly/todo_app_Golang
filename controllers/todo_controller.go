@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/dalia3aly/go-sqlite-backend/models"
-	"github.com/dalia3aly/go-sqlite-backend/services"
+	"todo-app-backend/models"
+	"todo-app-backend/services"
 	"github.com/gin-gonic/gin"
 )
 

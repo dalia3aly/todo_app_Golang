@@ -3,8 +3,8 @@ package services
 import (
 	"errors"
 
-	"github.com/dalia3aly/go-sqlite-backend/config"
-	"github.com/dalia3aly/go-sqlite-backend/models"
+	"todo-app-backend/config"
+	"todo-app-backend/models"
 )
 
 type TodoService struct{}

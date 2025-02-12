@@ -4,9 +4,9 @@ import (
 	"log"
 	"os"
 
-	"github.com/dalia3aly/go-sqlite-backend/config"
-	"github.com/dalia3aly/go-sqlite-backend/models"
-	"github.com/dalia3aly/go-sqlite-backend/routes"
+	"todo-app-backend/config"
+	"todo-app-backend/models"
+	"todo-app-backend/routes"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 )
