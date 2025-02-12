@@ -3,8 +3,8 @@ package services
 import (
 	"errors"
 
-	"github.com/dalia3aly/go-sqlite-backend/config"
-	"github.com/dalia3aly/go-sqlite-backend/models"
+	"todo-app-backend/config"
+	"todo-app-backend/models"
 )
 
 type CategoryService struct{}
@@ -39,7 +39,6 @@ func (s *CategoryService) UpdateCategory(id uint, category *models.Category) err
 }
 
 func (s *CategoryService) DeleteCategory(id uint) error {
-	// Check if category has todos
 	var count int64
 	if err := config.DB.Model(&models.Todo{}).Where("category_id = ?", id).Count(&count).Error; err != nil {
 		return err

@@ -6,7 +6,6 @@ import (
 	"gorm.io/gorm"
 )
 
-// Base model for common fields (matches BaseEntity.java)
 type Model struct {
 	ID        uint           `gorm:"primarykey" json:"id"`
 	CreatedAt time.Time      `gorm:"not null;default:CURRENT_TIMESTAMP" json:"createdAt"`
@@ -14,14 +13,12 @@ type Model struct {
 	DeletedAt gorm.DeletedAt `gorm:"index" json:"deletedAt,omitempty"`
 }
 
-// Category model (matches Category.java)
 type Category struct {
 	Model
 	Name  string `gorm:"unique;not null" json:"name"`
 	Todos []Todo `gorm:"foreignKey:CategoryID" json:"todos,omitempty"` // One-to-many relationship with Todo
 }
 
-// Todo model (matches Todo.java)
 type Todo struct {
 	Model
 	Title       string    `gorm:"not null" json:"title"`
